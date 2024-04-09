@@ -30,7 +30,7 @@
             height: 36px;
             gap: 5px;
             max-width: 290px;
-
+           
             .selectedItem {
                 background-color: #E2E8F0;
                 color: #334154;
@@ -46,6 +46,12 @@
                 align-items: center;
                 gap: 5px;
                 justify-content: center;
+
+                &:hover{
+                    background-color: #334154;
+                    color: #fff;
+                    cursor: default;
+                }
 
                 .selectedTitle {
                     white-space: nowrap;
@@ -63,6 +69,8 @@
                     cursor: pointer;
                     border-radius: 6px;
                 }
+
+                
             }
 
 

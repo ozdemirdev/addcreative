@@ -30,16 +30,13 @@ export default function MultiSelectDropdown() {
         getNextPage(nextReq)
     }, [activePage])
 
-    useEffect(() => {
-    }, [loader])
-
     return (
         <div className={styles.multiselectWrapper}>
             <div className={styles.textInputWrapper}>
                 <div className={styles.selectedWrapper}>
                     {
                         selectedCharacters.map((selected: any) => {
-                            return <div className={styles.selectedItem} key={selected.id}>
+                            return <div className={styles.selectedItem} key={selected.id} tabIndex={0} onKeyUp={(e) => handleSelectedItemKeyUp(e, selected)}>
                                 <div className={styles.selectedTitle}>{selected.name}</div>
                                 <div className={styles.removeButtonWrapper} onClick={() => handleRemove(selected)}><div>x</div></div>
                             </div>
@@ -69,6 +66,12 @@ export default function MultiSelectDropdown() {
             </div>
         </div>
     );
+
+    function handleSelectedItemKeyUp(event: any, character: any){
+        if(event.code == 'Space'){
+            handleRemove(character)
+        }
+    }
 
     function boldedText(text: string, shouldBeBold: string) {
         const textArray = text.split(shouldBeBold);
