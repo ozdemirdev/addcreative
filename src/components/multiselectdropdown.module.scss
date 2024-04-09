@@ -1,0 +1,120 @@
+.multiselectWrapper {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .textInputWrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border: 1px solid #94A3B8;
+        border-radius: 12px;
+        padding: 0 5px;
+        flex-grow: 1;
+        input {
+            height: 36px;
+            outline: none;
+            border: none;
+            background-color: transparent;
+            text-indent: 10px;
+            flex-grow: 1;
+        }
+
+        .selectedWrapper {
+            overflow-x: scroll;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            height: 36px;
+            gap: 5px;
+            max-width: 290px;
+
+            .selectedItem {
+                background-color: #E2E8F0;
+                color: #334154;
+                border-radius: 6px;
+                height: 36px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                height: 32px;
+                padding: 0 5px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 5px;
+                justify-content: center;
+
+                .selectedTitle {
+                    white-space: nowrap;
+                }
+
+                .removeButtonWrapper{
+                    background-color: #94A3B8;
+                    color: #fff;
+                    width: 18px;
+                    height: 18px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    line-height: 18px;
+                    cursor: pointer;
+                    border-radius: 6px;
+                }
+            }
+
+
+        }
+    }
+
+    .optionsWrapper {
+        display: flex;
+        flex-direction: column;
+        overflow-y: scroll;
+        max-height: 350px;
+        border: 1px solid #94A3B8;
+        border-radius: 6px;
+
+        &::-webkit-scrollbar-thumb {
+            background-color: #94A3B8;
+            border-radius: 8px;
+        }
+
+        &::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .contentWrapper {
+            display: flex;
+            flex-direction: column;
+
+            .episode {
+                font-size: 12px;
+            }
+        }
+
+        .option {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 10px;
+
+            &:not(:last-child) {
+                border-bottom: 1px solid #94A3B8;
+            }
+
+
+            .imgWrapper {
+                border-radius: 12px;
+
+                img {
+                    border-radius: 12px;
+                }
+            }
+        }
+
+    }
+}
