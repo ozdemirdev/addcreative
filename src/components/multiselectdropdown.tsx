@@ -58,7 +58,7 @@ export default function MultiSelectDropdown() {
                             </div>
                             <div className={styles.contentWrapper}>
                                 <div className={styles.title}>{boldedText(character.name, searchText) }</div>
-                                <div className={styles.episode}>{character.episode?.length}</div>
+                                <div className={styles.episode}>{character.episode?.length} Episodes</div>
                             </div>
                         </div>
                     })
